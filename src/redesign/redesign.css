@@ -269,3 +269,9 @@
   .near-tab-heading > span { max-width: 90px; text-align: right; }
 }
 @media (prefers-reduced-motion: reduce) { .near-page, .near-dialog { animation: none; } .near-map-panel, .near-layer-options { transition: none; } }
+
+/* Публичная сборка: цветная подложка, источники карты убраны вниз за шторку */
+.near-map-canvas .leaflet-bottom,
+.near-tab--map .near-map-canvas .leaflet-bottom { top: auto !important; bottom: 0 !important; }
+.near-map-canvas .leaflet-control-attribution a[href="https://leafletjs.com"],
+.near-map-canvas .leaflet-control-attribution > span[aria-hidden="true"] { display: none; }

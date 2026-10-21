@@ -3,7 +3,7 @@ import { TileLayer, useMap } from 'react-leaflet'
 import workerUrl from 'maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url'
 import 'maplibre-gl/dist/maplibre-gl.css'
 
-const MAP_STYLE = 'https://tiles.openfreemap.org/styles/positron'
+const MAP_STYLE = 'https://tiles.openfreemap.org/styles/bright'
 
 const MAPBOX_TOKEN = import.meta.env.VITE_MAPBOX_TOKEN
 const MAPBOX_TILES = `https://api.mapbox.com/styles/v1/mapbox/streets-v12/tiles/512/{z}/{x}/{y}@2x?access_token=${MAPBOX_TOKEN}`

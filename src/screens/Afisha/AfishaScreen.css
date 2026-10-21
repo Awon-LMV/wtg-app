@@ -1,0 +1,19 @@
+.afisha { position: absolute; inset: 0; background: var(--bg-afisha); overflow: hidden; }
+.afisha__head { position: absolute; left: 0; right: 0; top: 0; height: 188px; background: var(--bg-afisha); z-index: 2; }
+.afisha__title { position: absolute; left: 19px; top: 55px; margin: 0; font-size: 24px; line-height: 40px; font-weight: 700; color: var(--label); }
+.afisha__search {
+  position: absolute; left: 18px; right: 18px; top: 99px; height: 40px; border-radius: 12px; background: #EFEEF1;
+  display: flex; align-items: center; gap: 16px; padding: 0 14px;
+}
+.afisha__search input { flex: 1; min-width: 0; border: 0; outline: 0; background: none; font-size: 13.5px; color: var(--label); padding: 0; }
+.afisha__search input::placeholder { color: #8E8E93; opacity: 1; }
+.afisha__chips { position: absolute; left: 0; right: 0; top: 145px; height: 44px; display: flex; gap: 8px; padding: 4px 18px; overflow-x: auto; }
+.afisha__chip {
+  flex-shrink: 0; height: 34px; padding: 0 14px; border-radius: 999px; background: #fff; border: 1px solid #E0E0E5;
+  font-size: 13px; font-weight: 500; color: var(--label); white-space: nowrap;
+}
+.afisha__chip.is-active { background: var(--ios-blue); border-color: var(--ios-blue); color: #fff; font-weight: 600; box-shadow: 0 3px 10px rgba(0, 122, 255, .35); }
+.afisha__grid {
+  position: absolute; inset: 0; overflow-y: auto; padding: 201px 18px 100px;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 12px; align-content: start; align-items: start; grid-auto-rows: max-content;
+}

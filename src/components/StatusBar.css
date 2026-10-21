@@ -1,0 +1,10 @@
+.statusbar {
+  position: absolute; z-index: 1000; top: 0; left: 0; right: 0; height: 47px;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 4px 26px 0 33px; pointer-events: none;
+  font-family: var(--font-system); letter-spacing: -0.01em;
+}
+.statusbar--light { color: #fff; }
+.statusbar--dark { color: #000; }
+.statusbar__time { font-size: 15px; font-weight: 600; width: 54px; text-align: center; }
+.statusbar__right { display: flex; align-items: center; gap: 5px; }

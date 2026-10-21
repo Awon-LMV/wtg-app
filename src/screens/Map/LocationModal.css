@@ -1,0 +1,20 @@
+.locm-root { position: absolute; inset: 0; }
+.locm-scrim { position: absolute; inset: 0; background: rgba(0, 0, 0, .54); opacity: 0; transition: opacity .2s ease; }
+.locm-root.is-open .locm-scrim { opacity: 1; }
+.locm-card {
+  position: absolute; left: 42px; top: 270px; width: 307px; height: 314px; padding: 24px 24px 0; border-radius: 24px; background: #fff;
+  display: flex; flex-direction: column; align-items: center; text-align: center;
+  opacity: 0; transform: scale(.96); transition: opacity .2s ease, transform .2s var(--ease-sheet);
+}
+.locm-root.is-open .locm-card { opacity: 1; transform: scale(1); }
+.locm-icon {
+  width: 79px; height: 79px; border-radius: 50%; display: grid; place-items: center; flex-shrink: 0;
+  background: linear-gradient(135deg, #42A5F5, #1E88E5); box-shadow: 0 4px 20px rgba(66, 165, 245, .45);
+}
+.locm-title { margin: 21px 0 0; font-size: 20px; line-height: 24px; font-weight: 700; color: var(--label); }
+.locm-sub { margin: 11px 0 0; font-size: 14.6px; line-height: 18px; color: var(--label-3); }
+.locm-btns { margin-top: auto; padding-bottom: 26px; display: flex; gap: 12px; width: 100%; }
+.locm-btn { flex: 1; height: 44px; border-radius: 14px; font-size: 14px; font-weight: 500; transition: transform .12s ease; }
+.locm-btn:active { transform: scale(.97); }
+.locm-btn--cancel { background: #fff; border: 1px solid #E0E0E0; color: var(--label-3); }
+.locm-btn--ok { background: #1E88E5; color: #fff; box-shadow: 0 4px 10px rgba(30, 136, 229, .35); }

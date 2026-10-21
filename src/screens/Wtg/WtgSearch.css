@@ -1,0 +1,80 @@
+.wtgs {
+  position: absolute; inset: 0; background: #FAFAFC; overflow: hidden;
+  transform: translateY(100%); transition: transform 300ms var(--ease-sheet);
+}
+.wtgs.is-open { transform: translateY(0); }
+.wtgs__scroll { position: absolute; inset: 0; overflow-y: auto; overflow-x: hidden; padding: 0 26px 45px; }
+
+.wtgs__head { position: relative; height: 150px; margin: 0 -26px; }
+.wtgs__logo {
+  position: absolute; left: 27px; top: 51px; width: 52px; height: 52px; border-radius: 14px;
+  background: linear-gradient(135deg, var(--wtg-from), var(--wtg-to));
+  display: grid; place-items: center; box-shadow: 0 8px 20px rgba(102, 126, 234, .38);
+}
+.wtgs__title {
+  position: absolute; left: 98px; top: 33px; margin: 0; font-size: 26px; font-weight: 700; line-height: 30px; color: #1C1C1E;
+  letter-spacing: .01em; white-space: nowrap;
+}
+.wtgs__close {
+  position: absolute; right: 26px; top: 57px; width: 40px; height: 40px; border-radius: 50%; background: #F2F2F7;
+  display: grid; place-items: center; transition: transform .12s;
+}
+.wtgs__close:active { transform: scale(.94); }
+
+.wtgs__field {
+  display: flex; align-items: center; gap: 15px; box-sizing: border-box; height: 80px; padding: 0 16px;
+  border-radius: 18px; background: #EFEFF7; border: 2px solid #DADDF8; cursor: text;
+}
+.wtgs__input {
+  flex: 1; min-width: 0; height: 43px; border: 0; outline: 0; resize: none; background: transparent; padding: 0;
+  font-size: 15px; line-height: 21.5px; color: #1C1C1E; overflow: hidden;
+}
+.wtgs__fwrap { position: relative; flex: 1; min-width: 0; height: 43px; }
+.wtgs__fwrap .wtgs__input { position: absolute; inset: 0; width: 100%; }
+.wtgs__hint { position: absolute; inset: 0; pointer-events: none; font-size: 15px; line-height: 21.5px; color: #8E8E93; }
+.wtgs__hint div { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+.wtgs__h { margin: 28px 0 11px; font-size: 18px; line-height: 24px; font-weight: 700; color: #1C1C1E; }
+.wtgs__field + .wtgs__h { margin-top: 32px; }
+.wtgs__h--b { margin: 0; }
+
+.wtgs__chips { display: flex; flex-wrap: wrap; gap: 10.6px; }
+.wtgs__chips--want { column-gap: 8px; }
+.wtgs__chip {
+  box-sizing: border-box; height: 55px; padding: 0 16px 0 17px; border-radius: 14px; background: #fff; border: 1px solid #E5E5EA;
+  display: inline-flex; align-items: center; gap: 7px; font-size: 14px; color: #3C3C43; white-space: nowrap;
+  transition: transform .12s, background .15s, border-color .15s;
+}
+.wtgs__chip--sm { height: 47px; padding: 0 14.6px 0 15px; gap: 5px; }
+.wtgs__chip:active, .wtgs__tile:active { transform: scale(.97); }
+.wtgs__emoji { font-size: 20px; line-height: 1; }
+.wtgs__emoji--sm { font-size: 14px; }
+.wtgs__chip.is-on, .wtgs__tile.is-on { background: #EEF0FD; border-color: #667EEA; color: #5B6BD6; }
+
+.wtgs__tiles { display: flex; justify-content: space-between; gap: 8px; }
+.wtgs__tile {
+  box-sizing: border-box; flex: 1; height: 70px; border-radius: 14px; background: #fff; border: 1px solid #E5E5EA;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px;
+  font-size: 11px; font-weight: 500; color: #3C3C43; transition: transform .12s, background .15s, border-color .15s;
+}
+
+.wtgs__budget-row { display: flex; justify-content: space-between; align-items: center; margin-top: 25px; height: 24px; }
+.wtgs__budget-val { font-size: 15px; color: #8E8E93; font-weight: 500; }
+
+.wtgs__slider { position: relative; margin: 15px 0 0; height: 28px; touch-action: none; cursor: pointer; }
+.wtgs__track { position: absolute; left: 24.7px; right: 24.7px; top: 11px; height: 6px; border-radius: 3px; background: rgba(107, 125, 227, .28); pointer-events: none; }
+.wtgs__fill { position: absolute; top: 0; bottom: 0; background: #6B7DE3; border-radius: 3px; }
+.wtgs__thumb {
+  position: absolute; top: 50%; width: 20px; height: 20px; margin: -10px 0 0 -10px; border-radius: 50%; background: #6B7DE3;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .3); pointer-events: auto; cursor: grab; touch-action: none;
+}
+.wtgs__scale { display: flex; justify-content: space-between; margin-top: 7px; font-size: 14px; color: #8E8E93; }
+
+.wtgs__go {
+  width: 100%; height: 57px; margin-top: 32px; border-radius: 18px; background: #E8E8EC; color: #A0A0A8;
+  display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 18px; font-weight: 700;
+  transition: transform .12s, background .2s;
+}
+.wtgs__go.is-ready { background: linear-gradient(135deg, var(--wtg-from), var(--wtg-to)); color: #fff; box-shadow: 0 6px 18px rgba(102, 126, 234, .3); }
+.wtgs__go.is-ready:active { transform: scale(.98); }
+.wtgs__go:disabled { cursor: default; }

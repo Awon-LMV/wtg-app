@@ -1,0 +1,13 @@
+.bsheet-root { position: absolute; inset: 0; z-index: 200; pointer-events: none; }
+.bsheet-scrim { position: absolute; inset: 0; background: var(--scrim); opacity: 0; transition: opacity .26s ease; pointer-events: auto; }
+.bsheet-scrim.is-open { opacity: 1; }
+.bsheet {
+  position: absolute; left: 0; right: 0; bottom: 0; background: #fff;
+  display: flex; flex-direction: column; overflow: hidden; pointer-events: auto;
+  transition: transform .32s var(--ease-sheet);
+  box-shadow: 0 -2px 20px rgba(0,0,0,.08);
+}
+.bsheet--dark { background: var(--m3-dark-surface); color: #E6E1E5; }
+.bsheet__handle-zone { flex-shrink: 0; height: 26px; display: grid; place-items: center; touch-action: none; cursor: grab; }
+.bsheet__handle { width: 40px; height: 4px; border-radius: 2px; background: #D1D1D6; }
+.bsheet--dark .bsheet__handle { background: #5A5F66; }

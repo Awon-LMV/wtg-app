@@ -1,0 +1,22 @@
+.coll { position: absolute; inset: 0; background: var(--bg-grouped); }
+.coll__scroll { position: absolute; inset: 0; overflow-y: auto; padding: 0 19px 100px; }
+.coll__title { margin: 0; padding-top: 58px; height: 119px; font-size: 32px; line-height: 40px; font-weight: 700; color: var(--label); }
+.coll__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 13px; }
+.coll-card {
+  position: relative; display: flex; flex-direction: column; height: 227px; padding: 0; text-align: left;
+  border-radius: 20px; overflow: hidden; background: #fff; box-shadow: 0 4px 16px rgba(0, 0, 0, .06);
+  transition: transform .15s ease;
+}
+.coll-card:active { transform: scale(.97); }
+.coll-card__top { flex: 1; min-height: 0; display: grid; place-items: center; position: relative; overflow: hidden; }
+.coll-card__top--fav { background: linear-gradient(180deg, #FCEDEF, #F7D1D4); }
+.coll-card__top--want { background: linear-gradient(180deg, #F1E6F5, #E3CCEC); }
+.coll-card__top--photo { background: #ddd; }
+.coll-card__top--photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 15% 50%; }
+.coll-card__circle { width: 63px; height: 63px; border-radius: 50%; display: grid; place-items: center; }
+.coll-card__bottom { flex: 0 0 57px; background: #fff; padding: 11px 14px 0; }
+.coll-card__name { font-size: 15px; font-weight: 700; line-height: 20px; color: var(--label); }
+.coll-card__sub { font-size: 12px; line-height: 15px; color: var(--label-3); }
+.coll-card--new { background: #FAFAFA; border: 1.5px solid #E0E0E0; box-shadow: none; align-items: center; justify-content: center; gap: 6px; }
+.coll-new__circle { width: 56px; height: 56px; border-radius: 50%; background: #E3EEFB; display: grid; place-items: center; }
+.coll-new__text { font-size: 14px; font-weight: 600; line-height: 16.7px; color: var(--label-2); text-align: center; }

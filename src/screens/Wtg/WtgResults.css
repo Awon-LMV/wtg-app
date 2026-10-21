@@ -1,0 +1,39 @@
+.wtgr { position: absolute; inset: 0; background: #000; overflow: hidden; opacity: 0; transition: opacity 240ms ease; }
+.wtgr.is-shown { opacity: 1; }
+
+.wtgr__panel { position: absolute; inset: 0; display: flex; align-items: center; pointer-events: none; }
+.wtgr__panel--l { background: #DCE1F8; padding-left: 44px; color: #677EEA; }
+.wtgr__panel--r { background: #E5E5EA; padding-right: 44px; justify-content: flex-end; color: #8E8E93; }
+.wtgr__panel-in { display: flex; flex-direction: column; align-items: center; gap: 8px; font-size: 17px; font-weight: 600; white-space: nowrap; }
+
+.wtgr__card { position: absolute; inset: 0; overflow: hidden; background: #111; touch-action: pan-y; cursor: grab; transform-origin: 50% 100%; user-select: none; }
+.wtgr__photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; pointer-events: none; }
+.wtgr__bg { position: absolute; inset: -30px; width: calc(100% + 60px); height: calc(100% + 60px); object-fit: cover; filter: blur(18px) brightness(.8); pointer-events: none; }
+.wtgr__photo--fit {
+  inset: auto; left: 0; top: 140px; width: 100%; height: auto;
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 40px, #000 calc(100% - 40px), transparent 100%);
+  mask-image: linear-gradient(to bottom, transparent 0, #000 40px, #000 calc(100% - 40px), transparent 100%);
+}
+.wtgr__shade { position: absolute; inset: 0; pointer-events: none; background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 45%, rgba(0,0,0,.35) 62%, rgba(0,0,0,.85) 100%); }
+
+.wtgr__info { position: absolute; inset: 0; pointer-events: none; }
+.wtgr__badges { position: absolute; left: 22px; top: 587px; display: flex; gap: 8px; }
+.wtgr__badge { height: 22px; padding: 0 10px; border-radius: 8px; display: grid; place-items: center; color: #fff; font-size: 10.5px; font-weight: 700; letter-spacing: .05em; }
+.wtgr__name { position: absolute; left: 22px; right: 22px; top: 617px; margin: 0; font-size: 29px; line-height: 40px; font-weight: 700; color: #fff; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.wtgr__desc {
+  position: absolute; left: 22px; right: 22px; top: 662px; margin: 0; font-size: 13.75px; line-height: 19.7px; color: rgba(255,255,255,.75);
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; height: 40px;
+}
+.wtgr__row { position: absolute; left: 22px; right: 22px; height: 24px; display: flex; align-items: center; gap: 8px; font-size: 14px; color: #fff; white-space: nowrap; }
+.wtgr__row--cat { top: 720px; }
+.wtgr__row--loc { top: 745px; }
+.wtgr__hint { position: absolute; left: 0; right: 0; top: 782px; line-height: 20px; text-align: center; font-size: 12px; color: rgba(255,255,255,.55); }
+
+.wtgr__top { position: absolute; left: 0; right: 0; top: 0; height: 150px; pointer-events: none; background: linear-gradient(to bottom, rgba(0,0,0,.55), rgba(0,0,0,0)); }
+.wtgr__bar { position: absolute; left: 26px; right: 26px; top: 87px; height: 40px; display: flex; align-items: center; pointer-events: none; }
+.wtgr__btn {
+  width: 40px; height: 40px; border-radius: 50%; background: rgba(255,255,255,.2); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  display: grid; place-items: center; pointer-events: auto; flex-shrink: 0; transition: transform .12s;
+}
+.wtgr__btn:active { transform: scale(.94); }
+.wtgr__title { flex: 1; margin: 0 0 0 16px; font-size: 20.7px; line-height: 26px; font-weight: 700; color: #fff; text-shadow: 0 1px 6px rgba(0,0,0,.55); white-space: nowrap; }

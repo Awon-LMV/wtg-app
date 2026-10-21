@@ -1,0 +1,79 @@
+/*
+  Токены сняты пипеткой со скриншотов в reference/.
+  Масштаб: 1 CSS px = 1.677 px скриншота (экран 390×844).
+  Это РЕПЛИКА как есть: несогласованность цветов сохранена намеренно.
+*/
+:root {
+  --screen-w: 390px;
+  --screen-h: 844px;
+  --safe-top: 47px;
+  --safe-bottom: 34px;
+
+  --font: 'Inter Variable', Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-system: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', sans-serif;
+  --tracking-body: 0.01em;
+
+  /* нейтральные (iOS) */
+  --label: #1C1C1E;
+  --label-2: #3C3C43;
+  --label-3: #8E8E93;
+  --label-4: #AEAEB2;
+  --fill: #F2F2F7;          /* поля поиска, квадратные кнопки */
+  --fill-2: #F1F0F5;
+  --separator: #E5E5EA;
+  --bg-grouped: #F5F5F7;    /* Коллекции */
+  --bg-afisha: #F8F9FA;
+  --white: #FFFFFF;
+
+  /* синие — три разных синих в одном приложении */
+  --ios-blue: #007AFF;      /* чип «Все», ссылки, км */
+  --md-blue: #1E88E5;       /* кнопки модалки и пикера */
+  --md-blue-light: #42A5F5;
+  --md-blue-locate: #2196F3;
+  --info-bg: #E8F4FD;
+  --info-border: #B8DCF7;
+  --info-text: #1E78C8;
+
+  /* «AI»-градиент кнопки WTG и поиска (#667eea → #764ba2) */
+  --wtg-from: #667EEA;
+  --wtg-to: #764BA2;
+
+  /* профиль и настройки — Tailwind indigo/violet/slate */
+  --indigo-500: #6366F1;
+  --violet-500: #8B5CF6;
+  --indigo-50: #EEF0FD;
+  --slate-50: #F8FAFC;
+  --slate-200: #E2E8F0;
+  --slate-400: #94A3B8;
+  --slate-500: #64748B;
+  --slate-800: #1E293B;
+  --emerald-500: #10B981;
+  --emerald-50: #ECFDF5;
+  --amber-500: #F59E0B;
+  --red-500: #EF4444;
+  --cyan-500: #06B6D4;
+
+  /* категории (цвет кнопки «Маршрут» зависит от категории) */
+  --cat-coffee: #8B4513;
+  --cat-bars: #7B1FA2;
+  --cat-restaurants: #E65100;
+  --cat-fastfood: #F57C00;
+  --cat-culture: #3949AB;
+  --cat-default: #1E88E5;
+
+  /* тёмный Material-диалог «Новая подборка» */
+  --m3-dark-surface: #16191C;
+  --m3-dark-surface-2: #1F2327;
+  --m3-primary: #4F3FE8;
+  --m3-outline: #4B3FD9;
+
+  --closed-red: #E53935;
+  --collections-red: #E5605C;
+  --collections-purple: #A34DBB;
+
+  --r-sheet: 28px;
+  --shadow-float: 0 4px 16px rgba(0, 0, 0, 0.12);
+  --shadow-card: 0 6px 20px rgba(0, 0, 0, 0.10);
+  --scrim: rgba(0, 0, 0, 0.45);
+  --ease-sheet: cubic-bezier(0.2, 0.9, 0.25, 1);
+}

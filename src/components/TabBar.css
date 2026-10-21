@@ -1,0 +1,12 @@
+.tabbar {
+  position: absolute; z-index: 50; left: 3px; right: 3px; bottom: 3px; height: 78px;
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  border-radius: 30px 30px 49px 49px;
+  -webkit-backdrop-filter: blur(18px) saturate(1.2); backdrop-filter: blur(18px) saturate(1.2);
+}
+.tabbar--map { background: linear-gradient(180deg, rgba(190,190,190,.78), rgba(205,205,205,.85)); color: #fff; }
+.tabbar--plain { background: rgba(245,245,247,.55); color: #8E8E93; }
+.tabbar__item { position: relative; display: flex; flex-direction: column; align-items: center; padding-top: 11px; gap: 2px; }
+.tabbar__label { font-size: 13px; font-weight: 500; letter-spacing: 0.01em; }
+.tabbar__dot { position: absolute; top: 59px; width: 4px; height: 4px; border-radius: 50%; background: currentColor; opacity: 0; }
+.tabbar__item[aria-current='page'] .tabbar__dot { opacity: 1; background: #fff; }
